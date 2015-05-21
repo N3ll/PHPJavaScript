@@ -1,1 +1,3 @@
-First basic project using JavaScript and PHP.
+My first basic project using JavaScript and PHP - website. 
+
+
