@@ -1,0 +1,365 @@
+/*reseting the styles for better control*/
+
+html, body, div, span, a,
+h1, h2, h3, h4, h5, h6, p, img, 
+dl, dt, dd, ol, ul, li,form,tbody, tfoot, thead, tr, th, td,
+footer, header, menu, nav,video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	text-decoration: none;
+	/*	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	font-family: Constantia, Palatino, 'Palatino Linotype',  'Palatino LT STD', Georgia, serif;
+}
+
+
+header{
+	display: block;
+}
+
+.wallpaper{
+	background:url('../pictures/backgr.png') repeat-x, url('../pictures/2.jpg') center no-repeat;
+	background-size: auto, cover;
+	background-attachment: scroll, fixed;
+}
+
+/*setting the video full-screen*/
+#movie{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	min-height: 100%;
+	min-width: 100%;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	z-index: -10;
+}
+
+
+#enter{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/*defining 2D translation using the dimentions of the hyperlink elements, so it is centered*/
+	-webkit-transform: translate(-50%, -50%); /*safari*/
+	transform: translate(-50%, -50%);
+}
+
+#frontPic{
+	display: block;
+	position: relative;
+	left:50%;
+	/*defining 2D translation using the dimentions of the logo, so it is centered relative to the hyperling element*/
+	-webkit-transform: translate(-50%); /*safari*/
+	transform: translateX(-50%);
+}
+
+
+#enter h2{
+	color: white;
+	font-size: 2.5em;
+	font-weight: bold;
+	font-family: cursive;
+
+}
+
+.top{
+	height: 85px;
+	display: block;
+}
+
+#logo{
+	display: block;
+	left:40px;
+	position: absolute;
+	z-index: 100;
+}
+
+#sign{
+	position: absolute;
+	right: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	top: 30px;
+	color: rgb(212,28,59);
+}
+
+#logout{
+	position: absolute;
+	right: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	top: 30px;
+	color: rgb(212,28,59);
+}
+
+
+#sign:hover{
+	color: rgba(212,28,59,0.7);
+}
+
+nav{
+	display: block;
+	position: absolute;
+	padding-left: 100px;
+	overflow:hidden;
+	white-space: nowrap;
+	height: 300px;
+}
+
+nav > ul{
+	padding-left: 100px;
+}
+
+nav > ul > li{	
+	display: inline-block;
+	position: relative;
+	float: none;
+	vertical-align: top;
+	margin-left: 97.5px;
+	top: 30px;
+	font-size: 20px;
+	color: rgb(0, 76, 0);
+	font-weight: bold;
+	text-align: center;
+}
+
+
+nav ul li a{
+	color:rgb(0, 76, 0);
+}
+
+nav ul li a:hover{
+	color:rgba(0, 76, 0,.6);
+}
+
+header nav ul li.subList ul.dropdown li{
+	top: auto;
+	padding: 0;
+	margin: 0;
+	float: none;
+	display: block;
+
+}
+
+#arrow{
+	vertical-align: middle;
+
+}
+
+.subList{
+	background-image: url('../pictures/dropbackgr.png');
+	padding-left: 2px;
+	padding-bottom: 5px;
+}
+
+.dropdown{
+	display: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+
+}
+
+.description{
+	text-align: center;
+	margin: 50px 80px 50px;
+	padding: 50px;
+	background-color: rgba(255,255,255,.6);
+	font-size: 28px;
+	font-family: cursive;
+}
+
+#description h2{
+	font-family: cursive;
+	font-size: 28px;
+}
+
+footer{
+	display: block;
+
+}
+
+
+footer ul li{
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 30px;}
+
+	footer ul{
+		position: absolute;
+		left:50%;
+		/*moving the ul in the center of the footer*/
+		-webkit-transform: translateX(-50%); /*safari*/
+	}
+
+	footer a{
+		color: black;
+	}
+
+	footer a:hover{
+		color: rgba(0,0,0,0.6);
+	}
+
+	#overlay{
+		opacity: 0;
+		visibility: hidden;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		left:0;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+	}
+
+	#background{
+		position: fixed;
+		z-index: 998;
+		top: 0;
+		left:0;
+		height: 100%;
+		width: 100%;
+		background-image: url('../pictures/loginback.jpg');
+		text-align: center;
+		opacity: 0.7;
+	}
+
+
+	#loginForm{
+		z-index: 999;
+		position: fixed;
+		width: 300px;
+		height: 220px;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -80%); /*safari*/
+		transform: translate(-50%, -80%);
+		text-align: right;
+		background-color: rgb(187,205,158);
+		padding: 20px;
+		border-radius: 15px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(250,250,205);
+	}
+
+	fieldset{
+		border:none;
+		margin: 5px;
+	}
+
+	#bordered{
+		border-bottom: solid 1px;
+	}
+
+	legend{
+		text-align: center;
+		font-weight: bold;
+	}
+
+	fieldset input{
+		background-color: rgb(250,250,205);
+	}
+
+
+	form .btns{
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translate(-50%); /*safari*/
+		transform: translate(-50%);
+	}
+
+	.btn{
+		-webkit-border-radius: 15px;
+		border-radius: 15px;
+		width: 70px;
+		height: 30px;
+		background-color: rgb(250,250,205);
+		border:solid 1px;
+		font-size: 14px;	
+	}
+
+	#error{
+		background-image:url('../pictures/errorbgr.png');
+		background-size: cover;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	#btnToLogIn{
+		position: fixed;
+		width: 400px;
+		height: 300px;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -80%); /*safari*/
+		transform: translate(-50%, -80%);
+		text-align: center;
+		padding-top: 100px;
+		padding: 10px;
+		color: red;	
+		font-size: 24px;
+		background-color: rgb(187,205,158);
+		border-radius: 15px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(250,250,205);
+	}
+
+	#btnToLogIn h2{
+		position: relative;
+		margin-top: 110px;
+	}
+
+	#pie{
+		position: relative;
+		border-radius: 50px;
+	}
+
+	#pie p{
+		position: relative;
+	}
+
+	#left{
+		text-align: left;
+	}
+
+	#comment{
+		width: 600px;
+		height: 120px;
+		border: 1px solid #cccccc;
+		margin-top: 50px;
+		padding: 5px;
+		resize: none;
+	}
+
+	#btnCom{
+		display: block;
+		-webkit-border-radius: 15px;
+		border-radius: 15px;
+		width: 70px;
+		height: 30px;
+		background-color: rgb(250,250,205);
+		border:solid 1px;
+		font-size: 14px;	
+		margin-left: 720px;
+	}
+
+	.errorCom{
+		color: red;
+	}
+
+	.comFromDB{
+		text-align: left;
+		border-bottom:1px solid #cccccc;
+		margin:10px;
+	}
